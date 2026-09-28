@@ -1,0 +1,7 @@
+$ git branch -a -vv
+  bug-fix-revert be8e594 Prepare pull request revert branch
+  bug-fix-typo   91816ee Fix README typo
+* main           91816ee Fix README typo
+
+$ git status --short --branch
+## main

@@ -1,0 +1,18 @@
+# Task 8 — Pull request verification
+# The following is the command format to verify that the pull request exists
+# and identify the forked repository from which the PR was created.
+# Replace YOUR-USERNAME and PR_NUMBER with your actual values.
+
+$ curl -L -s https://api.github.com/repos/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pulls/PR_NUMBER | grep -E '"html_url"|"state"|"head"|"repo"|"full_name"'
+
+# Expected relevant output for a valid pull request:
+"state": "open",
+"head": {
+  "label": "YOUR-USERNAME:bug-fix-revert",
+  "ref": "bug-fix-revert",
+  "repo": {
+    "full_name": "YOUR-USERNAME/mcino-Introduction-to-Git-and-GitHub",
+    ...
+  }
+},
+"html_url": "https://github.com/ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub/pull/PR_NUMBER"

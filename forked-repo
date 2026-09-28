@@ -1,13 +1,11 @@
-# Task 6 — Fork verification
-# The following is the command format to verify the fork through the GitHub API.
-# Run it after authenticating with GitHub and replace YOUR-USERNAME with your GitHub username.
+ curl.exe -L -s https://api.github.com/repos/Krishna041205/mcino-Introduction-to-Git-and-GitHub | Select-String '"fork"|"parent"|"full_name"'
 
-$ curl -L -s https://api.github.com/repos/Krishna041205/mcino-Introduction-to-Git-and-GitHub | grep -E '"fork"|"parent"|"full_name"'
-
-# Expected relevant output after a successful fork:
-"full_name": "Krishna041205/mcino-Introduction-to-Git-and-GitHub",
-"fork": true,
-"parent": {
-  "full_name": "ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub",
-  ...
-}
+  "full_name": "Krishna041205/mcino-Introduction-to-Git-and-GitHub",
+  "fork": true,
+  "parent": {
+    "full_name":
+"ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub",
+    "fork": false,
+    "full_name":
+"ibm-developer-skills-network/mcino-Introduction-to-Git-and-GitHub",
+    "fork": false,
